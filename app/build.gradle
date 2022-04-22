@@ -19,10 +19,16 @@ android {
     }
 
     buildTypes {
+        debug{
+            buildConfigField "String", "API_KEY", '"C1KSd04vemTL2xiyKzchVrq2yj9177YN"'
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    buildFeatures {
+        dataBinding true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -52,5 +58,9 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
 
     implementation 'com.github.bumptech.glide:glide:4.13.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+    kapt 'com.github.bumptech.glide:compiler:4.13.0'
+
+    implementation "androidx.activity:activity-ktx:1.4.0"
+
+    implementation "androidx.paging:paging-runtime:$paging_version"
 }
