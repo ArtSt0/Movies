@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SplashTheme" parent="Theme.Movies">
+        <!--цвет фона-->
+        <item name="android:windowSplashScreenBackground">@color/splashscreen_background</item>
+
+        <!--изображение, которое будет отображаться в нижней части экрана-заставки-->
+        <item name="android:windowSplashScreenBrandingImage">@drawable/ic_splashscreen_branding_centered</item>
+    </style>
+</resources>

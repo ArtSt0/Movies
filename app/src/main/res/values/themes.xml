@@ -13,4 +13,29 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/splashscreen_background</item>
+    </style>
+
+    <style name="TextStyleNewYorkTimes">
+        <item name="fontFamily">@font/chomsky</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="CustomTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/grey</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.App.Headline6</item>
+
+    </style>
+
+    <style name="TextAppearance.App.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/chomsky</item>
+        <item name="android:fontFamily">@font/chomsky</item>
+    </style>
+
 </resources>

@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.movies.databinding.ActivityMainBinding
 import com.example.movies.paging.MovieRecyclerViewAdapter
 import com.example.movies.viewModels.MainViewModel
@@ -21,7 +20,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var pagingAdapter: MovieRecyclerViewAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
 
         bind = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -30,7 +31,6 @@ class MainActivity : AppCompatActivity() {
 
         bind.rvPersons.layoutManager = LinearLayoutManager(this)
         pagingAdapter = MovieRecyclerViewAdapter()
-        pagingAdapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.ALLOW
         bind.rvPersons.adapter = pagingAdapter
 
         lifecycleScope.launch {
@@ -38,6 +38,5 @@ class MainActivity : AppCompatActivity() {
                 pagingAdapter.submitData(it)
             }
         }
-
     }
 }
